@@ -1,12 +1,25 @@
 {
   "name": "vue-fake-input",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Custom input for individual characters",
+  "author": "Claudio Castro <claudioluiz.castro@gmail.com>",
+  "main": "dist/vue-fake-input.umd.js",
+  "unpkg": "dist/vue-fake-input.umd.min.js",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue.js",
+    "fake-input",
+    "character",
+    "input",
+    "custom-input"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "build": "vue-cli-service build --target lib --name vue-fake-input ./src/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
