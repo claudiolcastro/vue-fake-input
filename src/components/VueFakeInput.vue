@@ -1,6 +1,7 @@
 <template>
   <div class="fk-input-container">
     <input
+      :id="generateInputId(index)"
       type="text"
       maxlength="1"
       :style="{
@@ -57,7 +58,12 @@ export default {
       const width = this.fontSize ? this.fontSize + 8 : 30;
       return `${width}px`;
     },
+  },
 
+  methods: {
+    generateInputId(index) {
+      return `fk-${index}`;
+    },
   },
 };
 </script>
