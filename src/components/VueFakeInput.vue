@@ -62,7 +62,7 @@ export default {
 
   methods: {
     generateInputId(index) {
-      return `fk-${index}`;
+      return `fk-${index + 1}`;
     },
   },
 };
