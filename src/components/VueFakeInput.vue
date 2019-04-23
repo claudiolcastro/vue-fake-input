@@ -6,10 +6,11 @@
       maxlength="1"
       :style="{
         fontSize: fkFontSize,
-        borderBottom: fkBorderColor,
+        borderBottom: fkInputColor(index),
         color: fkFontColor,
         width: fkWidth,
       }"
+      v-model="inputValues[index]"
       :key="index"
       v-for="(input, index) in length"
     />
@@ -39,14 +40,15 @@ export default {
     },
   },
 
+  data() {
+    return {
+      inputValues: [],
+    };
+  },
+
   computed: {
     fkFontSize() {
       return this.fontSize ? `${this.fontSize}px` : '22px';
-    },
-
-    fkBorderColor() {
-      const color = this.inputColor ? this.inputColor : '#42b983';
-      return `3px solid ${color}`;
     },
 
     fkFontColor() {
@@ -64,6 +66,12 @@ export default {
     generateInputId(index) {
       return `fk-${index + 1}`;
     },
+
+    fkInputColor(index) {
+      const selectedColor = this.inputColor ? this.inputColor : '#42b983';
+      const color = this.inputValues[index] ? selectedColor : '#eeeeee';
+      return `3px solid ${color}`;
+    },
   },
 };
 </script>
@@ -76,6 +84,7 @@ export default {
       border: none;
       margin-left: 10px;
       text-align: center;
+
       &:first-child { margin-left: 0; }
       &:focus { outline: none; }
     }
