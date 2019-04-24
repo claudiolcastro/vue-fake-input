@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils';
 import VueFakeInput from '@/components/VueFakeInput.vue';
 
 describe('VueFakeInput.vue', () => {
-  it('renders VueFakeInput with correct number of inputs', () => {
+  it('renders VueFakeInput with correct number of inputs and default values', () => {
     const wrapper = shallowMount(VueFakeInput, {
       propsData: {
         length: 3,
@@ -10,9 +10,12 @@ describe('VueFakeInput.vue', () => {
     });
 
     expect(wrapper.findAll('input').length).toBe(3);
+
+    const style = 'font-size: 22px; border-bottom: 3px solid #eeeeee; color: rgb(68, 68, 68); width: 30px;';
+    expect(wrapper.find('#fk-1').attributes().style).toBe(style);
   });
 
-  it('renders VueFakeInput with correct style values', () => {
+  it('renders VueFakeInput with props passed', () => {
     const wrapper = shallowMount(VueFakeInput, {
       propsData: {
         length: 3,
@@ -22,7 +25,21 @@ describe('VueFakeInput.vue', () => {
       },
     });
 
-    const style = 'font-size: 33px; border-bottom: 3px solid red; color: green; width: 41px;';
+    const style = 'font-size: 33px; border-bottom: 3px solid #eeeeee; color: green; width: 41px;';
     expect(wrapper.find('#fk-1').attributes().style).toBe(style);
+  });
+
+  it('change the color of filled inputs', () => {
+    const wrapper = shallowMount(VueFakeInput, {
+      propsData: {
+        length: 3,
+        inputColor: 'red',
+      },
+    });
+
+    wrapper.setData({ inputValues: ['b', '3'] });
+
+    expect(wrapper.find('#fk-1').element.style.borderBottom).toBe('3px solid red');
+    expect(wrapper.find('#fk-3').element.style.borderBottom).toBe('3px solid #eeeeee');
   });
 });
