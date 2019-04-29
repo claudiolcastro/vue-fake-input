@@ -12,7 +12,7 @@ describe('VueFakeInput.vue', () => {
     expect(wrapper.findAll('input').length).toBe(3);
 
     const style = 'font-size: 22px; border-bottom: 3px solid #eeeeee; color: rgb(68, 68, 68); width: 30px;';
-    expect(wrapper.find('#fk-1').attributes().style).toBe(style);
+    expect(wrapper.find('#fk_1').attributes().style).toBe(style);
   });
 
   it('renders VueFakeInput with props passed', () => {
@@ -26,7 +26,7 @@ describe('VueFakeInput.vue', () => {
     });
 
     const style = 'font-size: 33px; border-bottom: 3px solid #eeeeee; color: green; width: 41px;';
-    expect(wrapper.find('#fk-1').attributes().style).toBe(style);
+    expect(wrapper.find('#fk_1').attributes().style).toBe(style);
   });
 
   it('change the color of filled inputs', () => {
@@ -39,7 +39,7 @@ describe('VueFakeInput.vue', () => {
 
     wrapper.setData({ inputValues: ['b', '3'] });
 
-    expect(wrapper.find('#fk-1').element.style.borderBottom).toBe('3px solid red');
-    expect(wrapper.find('#fk-3').element.style.borderBottom).toBe('3px solid #eeeeee');
+    expect(wrapper.find('#fk_1').element.style.borderBottom).toBe('3px solid red');
+    expect(wrapper.find('#fk_3').element.style.borderBottom).toBe('3px solid #eeeeee');
   });
 });
