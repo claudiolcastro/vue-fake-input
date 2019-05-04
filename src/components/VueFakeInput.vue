@@ -8,7 +8,7 @@
       :style="{
         fontSize: fkFontSize,
         borderBottom: fkInputColor(index),
-        color: fkFontColor,
+        color: fontColor,
         width: fkWidth,
       }"
       v-model="inputValues[index]"
@@ -30,14 +30,17 @@ export default {
     },
     fontSize: {
       type: Number,
+      default: 22,
       required: false,
     },
     inputColor: {
       type: String,
+      default: '#42b983',
       required: false,
     },
     fontColor: {
       type: String,
+      default: '#444444',
       required: false,
     },
   },
@@ -48,23 +51,14 @@ export default {
     };
   },
 
-  // mounted() {
-  //   const [i] = this.$refs.fk_3;
-  //   i.focus();
-  // },
-
   computed: {
     fkFontSize() {
-      return this.fontSize ? `${this.fontSize}px` : '22px';
-    },
-
-    fkFontColor() {
-      const color = this.fontColor ? this.fontColor : '#444444';
-      return color;
+      return `${this.fontSize}px`;
     },
 
     fkWidth() {
-      const width = this.fontSize ? this.fontSize + 8 : 30;
+      const width = this.fontSize + 8;
+
       return `${width}px`;
     },
   },
@@ -75,8 +69,8 @@ export default {
     },
 
     fkInputColor(index) {
-      const selectedColor = this.inputColor ? this.inputColor : '#42b983';
-      const color = this.inputValues[index] ? selectedColor : '#eeeeee';
+      const color = this.inputValues[index] ? this.inputColor : '#eeeeee';
+
       return `3px solid ${color}`;
     },
 
@@ -84,6 +78,7 @@ export default {
       if (this.inputValues[index] && this.inputValues[index] !== '' && index < this.length - 1) {
         const [nextInput] = this.$refs[`fk_${index + 2}`];
         nextInput.focus();
+
       } else if (index > 0 && this.inputValues[index] === '') {
         const [previusInput] = this.$refs[`fk_${index}`];
         previusInput.focus();
