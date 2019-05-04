@@ -12,7 +12,9 @@
         width: fkWidth,
       }"
       v-model="inputValues[index]"
-      @keyup="handleInputFacus(index)"
+      @keyup="handleInputFocus(index)"
+      @keydown="handleFilledInput(index, $event)"
+      @keydown.delete="handleEmptyInput(index)"
       :key="index"
       v-for="(input, index) in length"
     />
@@ -69,20 +71,50 @@ export default {
     },
 
     fkInputColor(index) {
-      const color = this.inputValues[index] ? this.inputColor : '#eeeeee';
+      const color = this.notEmpty(index) ? this.inputColor : '#eeeeee';
 
       return `3px solid ${color}`;
     },
 
-    handleInputFacus(index) {
-      if (this.inputValues[index] && this.inputValues[index] !== '' && index < this.length - 1) {
+    handleFilledInput(index, event) {
+      if (event.key !== 'Backspace' && index < this.length - 1) {
+        if (this.notEmpty(index)) {
+          const [nextInput] = this.$refs[`fk_${index + 2}`];
+          nextInput.focus();
+          this.inputValues[index+1] = event.target.value;
+        }
+      }
+    },
+
+    handleEmptyInput(index) {
+      if (index > 0) {
+        if (!this.inputValues[index] || this.inputValues[index] === '') {
+          const [previusInput] = this.$refs[`fk_${index}`];
+          previusInput.focus();
+          this.inputValues[index-1] = '';
+        }
+      }
+    },
+
+    handleInputFocus(index) {
+      if (this.inputValues[index] == ' ') {
+        this.inputValues[index] = null;
+      }
+
+      if (this.notEmpty(index) && index < this.length - 1) {
         const [nextInput] = this.$refs[`fk_${index + 2}`];
         nextInput.focus();
 
-      } else if (index > 0 && this.inputValues[index] === '') {
+      } else if (index > 0 && (!this.inputValues[index] || this.inputValues[index] === '')) {
         const [previusInput] = this.$refs[`fk_${index}`];
         previusInput.focus();
       }
+    },
+
+    notEmpty(index) {
+      return this.inputValues[index]
+              && this.inputValues[index] !== ''
+              && this.inputValues[index] !== ' ';
     },
   },
 };
