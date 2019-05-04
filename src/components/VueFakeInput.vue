@@ -12,7 +12,7 @@
         width: fkWidth,
       }"
       v-model="inputValues[index]"
-      @keyup="handleInputFacus(index)"
+      @keyup="handleInputFocus(index)"
       :key="index"
       v-for="(input, index) in length"
     />
@@ -74,7 +74,7 @@ export default {
       return `3px solid ${color}`;
     },
 
-    handleInputFacus(index) {
+    handleInputFocus(index) {
       if (this.inputValues[index] && this.inputValues[index] !== '' && index < this.length - 1) {
         const [nextInput] = this.$refs[`fk_${index + 2}`];
         nextInput.focus();
