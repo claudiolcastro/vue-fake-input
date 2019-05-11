@@ -42,4 +42,24 @@ describe('VueFakeInput.vue', () => {
     expect(wrapper.find('#fk_1').element.style.borderBottom).toBe('3px solid red');
     expect(wrapper.find('#fk_3').element.style.borderBottom).toBe('3px solid #eeeeee');
   });
+
+  it('call handleInputFocus on keyup event', () => {
+    const methods = {
+      handleInputFocus: jest.fn(),
+    };
+
+    const wrapper = shallowMount(VueFakeInput, {
+      propsData: {
+        length: 3,
+      },
+      methods,
+      attachToDocument: true,
+    });
+
+    wrapper.find('input#fk_1').trigger('keyup', {
+      key: 'a',
+    });
+
+    expect(methods.handleInputFocus).toHaveBeenCalledWith(0);
+  });
 });
