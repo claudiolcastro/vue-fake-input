@@ -79,7 +79,7 @@ export default {
         const [nextInput] = this.$refs[`fk_${index + 2}`];
         nextInput.focus();
 
-      } else if (index > 0 && this.inputValues[index] === '') {
+      } else if (index > 0 && (!this.inputValues[index] || this.inputValues[index] === '')) {
         const [previusInput] = this.$refs[`fk_${index}`];
         previusInput.focus();
       }
