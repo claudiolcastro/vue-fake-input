@@ -13,6 +13,8 @@
       }"
       v-model="inputValues[index]"
       @keyup="handleInputFocus(index)"
+      @paste.prevent="handlePastedValues"
+      contenteditable="true"
       :key="index"
       v-for="(input, index) in length"
     />
@@ -41,6 +43,11 @@ export default {
     fontColor: {
       type: String,
       default: '#444444',
+      required: false,
+    },
+    allowPaste: {
+      type: Boolean,
+      default: true,
       required: false,
     },
   },
@@ -78,11 +85,29 @@ export default {
       if (this.inputValues[index] && this.inputValues[index] !== '' && index < this.length - 1) {
         const [nextInput] = this.$refs[`fk_${index + 2}`];
         nextInput.focus();
-
       } else if (index > 0 && (!this.inputValues[index] || this.inputValues[index] === '')) {
         const [previusInput] = this.$refs[`fk_${index}`];
         previusInput.focus();
       }
+    },
+
+    handlePastedValues(event) {
+      if (this.allowPaste) {
+        const pastedValue = event.clipboardData.getData('text/plain');
+        const splitValues = pastedValue.split('');
+        const _this = this;
+
+        for (let i = 0; i < this.length; i++) {
+          _this.updateInputValue(i, splitValues[i]);
+        }
+
+        const [lastInput] = this.$refs[`fk_${this.length}`];
+        lastInput.focus();
+      }
+    },
+
+    updateInputValue(index, value) {
+      this.$set(this.inputValues, index, value);
     },
   },
 };
