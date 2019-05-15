@@ -1,26 +1,66 @@
-# vue-fake-input
+Vue Fake Input
+=============
 
-## Project setup
-```
-yarn install
-```
+[![License](https://img.shields.io/npm/l/enzyme.svg)](https://www.npmjs.com/package/enzyme)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Vue Fake input is a Vue.js based component to create custom inputs for individual characters.
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
-### Lints and fixes files
+### Installation
+
 ```
-yarn run lint
+npm install vue-fake-input
 ```
 
-### Run your unit tests
+or if you prefer yarn
+
 ```
-yarn run test:unit
+yarn add vue-fake-input
 ```
+
+## Usage
+
+### Global
+
+You may install Vue Fake Input globally:
+
+``` js
+import Vue from 'vue';
+import VueFakeInput from 'vue-fake-input';
+
+Vue.use(VueFakeInput);
+```
+This will make VueFakeInput available to all components within your Vue app.
+
+### Local
+
+Include VueFakeInput directly into your component using import:
+
+``` js
+import VueFakeInput from 'vue-fake-input';
+
+export default {
+  ...
+  components: {
+    VueFakeInput
+  }
+  ...
+};
+```
+
+### Configuration (props accepted)
+| Property | Type    | Required | Default | Description |
+|:---------|:--------|:---------|:--------|:------------|
+| length | Number | Yes |     | Length of the input. How many characters it will support |
+| fontSize | Number | No | 22 | Font size of the individual characters |
+| inputColor | String | No | '#42b983' | Color of the border bottom wen the input is filled |
+| fontColor | String | No | '#42b983' | Color of the individual Characters |
+| allowPaste | Boolean | No | true | Allow the use to paste values into the input |
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
