@@ -72,7 +72,9 @@ export default {
   :allowPaste="false"
 />
 ```
+
 Result:
+
 ![Demo3](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo3.png)
 
 ### Configuration (props accepted)
