@@ -1,7 +1,7 @@
 Vue Fake Input
 =============
 
-[![License](https://img.shields.io/npm/l/enzyme.svg)](https://www.npmjs.com/package/enzyme)
+[![License](https://claudiolcastro.github.io/img/vue-fake-input/mit.svg)](https://www.npmjs.com/package/vue-fake-input)
 
 Vue Fake input is a Vue.js based component to create custom inputs for individual characters.
 
@@ -9,6 +9,13 @@ Vue Fake input is a Vue.js based component to create custom inputs for individua
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+
+## Demos
+Type one char per time
+![Demo1](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo2.gif)
+
+or... Paste the entire value
+![Demo2](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo.gif)
 
 ### Installation
 
@@ -51,6 +58,19 @@ export default {
   ...
 };
 ```
+
+### Example
+```js
+<vue-fake-input
+  :length="5"
+  :fontSize="40"
+  inputColor="#31bce6"
+  fontColor="#ffc107"
+  :allowPaste="false"
+/>
+```
+Result:
+![Demo3](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo3.png)
 
 ### Configuration (props accepted)
 | Property | Type    | Required | Default | Description |
