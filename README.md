@@ -59,6 +59,9 @@ export default {
 };
 ```
 
+ In order to get the full value of the inputs, you have to add a `v-model` bind on
+ vue-fake-input and link to any data on your component.
+
 ### Example
 ```js
 <vue-fake-input
@@ -67,7 +70,17 @@ export default {
   inputColor="#31bce6"
   fontColor="#ffc107"
   :allowPaste="false"
+  v-model="fullValue"
 />
+...
+export default {
+  ...
+  data() {
+    return {
+      fullValue: '',
+    };
+  }
+  ...
 ```
 Result:
 ![Demo3](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo3.png)
