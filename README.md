@@ -11,10 +11,13 @@ Vue Fake input is a Vue.js based component to create custom inputs for individua
 - [License](#license)
 
 ## Demos
+
 Type one char per time
+
 ![Demo1](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo2.gif)
 
 or... Paste the entire value
+
 ![Demo2](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo.gif)
 
 ### Installation
@@ -82,7 +85,9 @@ export default {
   }
   ...
 ```
+
 Result:
+
 ![Demo3](https://claudiolcastro.github.io/img/vue-fake-input/inputdemo3.png)
 
 ### Configuration (props accepted)
