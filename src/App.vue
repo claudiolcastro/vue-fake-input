@@ -3,7 +3,9 @@
     <vue-fake-input
       :length="5"
       :fontSize="40"
+      v-model="fkValue"
     />
+    <h2>Value: {{fkValue}}</h2>
   </div>
 </template>
 
@@ -15,5 +17,10 @@ export default {
   components: {
     VueFakeInput,
   },
+  data() {
+    return {
+      fkValue: '',
+    };
+  }
 };
 </script>

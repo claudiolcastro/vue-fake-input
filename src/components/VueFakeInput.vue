@@ -14,6 +14,7 @@
       v-model="inputValues[index]"
       @keyup="handleInputFocus(index)"
       @paste.prevent="handlePastedValues"
+      @input="returnFullString()"
       contenteditable="true"
       :key="index"
       v-for="(input, index) in length"
@@ -108,6 +109,10 @@ export default {
 
     updateInputValue(index, value) {
       this.$set(this.inputValues, index, value);
+    },
+
+    returnFullString() {
+      this.$emit('input', this.inputValues.join(''));
     },
   },
 };

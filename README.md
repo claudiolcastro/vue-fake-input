@@ -79,7 +79,7 @@ Result:
 | fontSize | Number | No | 22 | Font size of the individual characters |
 | inputColor | String | No | '#42b983' | Color of the border bottom wen the input is filled |
 | fontColor | String | No | '#42b983' | Color of the individual Characters |
-| allowPaste | Boolean | No | true | Allow the use to paste values into the input |
+| allowPaste | Boolean | No | true | Allow the user to paste values into the input |
 
 ## License
 
