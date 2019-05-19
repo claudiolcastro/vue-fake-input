@@ -62,8 +62,8 @@ export default {
 };
 ```
 
- In order to get the full value of the inputs, you have to add a `v-model` bind on
- vue-fake-input and link to any data on your component.
+ #### In order to get the full value of the inputs, you have to add a `v-model` bind on
+ #### vue-fake-input and link to any data attribute on your component.
 
 ### Example
 ```js
