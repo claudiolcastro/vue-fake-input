@@ -93,8 +93,8 @@ Result:
 ### Configuration (props accepted)
 | Property | Type    | Required | Default | Description |
 |:---------|:--------|:---------|:--------|:------------|
-| length | Number | Yes |     | Length of the input. How many characters it will support |
-| fontSize | Number | No | 22 | Font size of the individual characters |
+| length | Number | Yes |     | Length of the input. How many characters it will support (the value is coverted to pixel) |
+| fontSize | Number | No | 22 | Font size of the individual characters (the value is coverted to pixel) |
 | inputColor | String | No | '#42b983' | Color of the border bottom wen the input is filled |
 | fontColor | String | No | '#42b983' | Color of the individual Characters |
 | allowPaste | Boolean | No | true | Allow the user to paste values into the input |
