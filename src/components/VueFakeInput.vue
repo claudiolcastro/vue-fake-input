@@ -12,6 +12,7 @@
         width: fkWidth,
       }"
       v-model="inputValues[index]"
+      @keydown="handleKeydown"
       @keyup="handleInputFocus(index)"
       @paste.prevent="handlePastedValues"
       @input="returnFullString()"
@@ -51,6 +52,11 @@ export default {
       default: true,
       required: false,
     },
+    onlyNumber: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
   },
 
   data() {
@@ -72,6 +78,25 @@ export default {
   },
 
   methods: {
+    handleKeydown(event) {
+      if (!this.onlyNumber) {
+        return;
+      }
+      const key = event.charCode || event.keyCode || 0;
+      if (
+        !(
+          key === 8
+          || key === 46
+          || key === 86
+          || key === 91
+          || (key >= 48 && key <= 57)
+          || (key >= 96 && key <= 105)
+        )
+      ) {
+        event.preventDefault();
+      }
+    },
+
     generateInputId(index) {
       return `fk_${index + 1}`;
     },
@@ -96,14 +121,23 @@ export default {
       if (this.allowPaste) {
         const pastedValue = event.clipboardData.getData('text/plain');
         const splitValues = pastedValue.split('');
-        const _this = this;
+        let canPaste = true;
 
-        for (let i = 0; i < this.length; i++) {
-          _this.updateInputValue(i, splitValues[i]);
+        if (this.onlyNumber) {
+          const regx = new RegExp(`^\\d{${this.length}}$`);
+          canPaste = regx.test(pastedValue);
         }
 
-        const [lastInput] = this.$refs[`fk_${this.length}`];
-        lastInput.focus();
+        if (canPaste) {
+          for (let i = 0; i < this.length; i++) {
+            this.updateInputValue(i, splitValues[i]);
+          }
+
+          const [lastInput] = this.$refs[`fk_${this.length}`];
+          lastInput.focus();
+
+          this.returnFullString();
+        }
       }
     },
 
