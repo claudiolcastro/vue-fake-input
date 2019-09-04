@@ -4,7 +4,7 @@
   "author": "Claudio Castro <claudioluiz.castro@gmail.com>",
   "main": "dist/vue-fake-input.umd.js",
   "unpkg": "dist/vue-fake-input.umd.min.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "license": "MIT",
   "keywords": [
