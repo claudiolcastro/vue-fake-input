@@ -13,7 +13,7 @@
       }"
       v-model="inputValues[index]"
       @keyup="handleInputFocus(index)"
-      @paste.prevent="handlePastedValues"
+      @paste="handlePastedValues"
       @input="returnFullString()"
       contenteditable="true"
       :key="index"
