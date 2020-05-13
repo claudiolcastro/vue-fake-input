@@ -62,4 +62,24 @@ describe('VueFakeInput.vue', () => {
 
     expect(methods.handleInputFocus).toHaveBeenCalledWith(0);
   });
+
+  it('call handleKeydown on keydown event', () => {
+    const methods = {
+      handleKeydown: jest.fn(),
+    };
+
+    const wrapper = shallowMount(VueFakeInput, {
+      propsData: {
+        length: 3,
+      },
+      methods,
+      attachToDocument: true,
+    });
+
+    wrapper.find('input#fk_1').trigger('keydown', {
+      key: '1',
+    });
+
+    expect(methods.handleKeydown).toHaveBeenCalled();
+  });
 });

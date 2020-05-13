@@ -98,6 +98,7 @@ Result:
 | inputColor | String | No | '#42b983' | Color of the border bottom wen the input is filled |
 | fontColor | String | No | '#42b983' | Color of the individual Characters |
 | allowPaste | Boolean | No | true | Allow the user to paste values into the input |
+| onlyNumber | Boolean | No | false | Only allow number input |
 
 ## License
 
