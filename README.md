@@ -62,6 +62,23 @@ export default {
 };
 ```
 
+### Local - SSR mode
+
+``` js
+var VueFakeInput
+if (process.browser) {
+  VueFakeInput = require('vue-fake-input').default
+}
+export default {
+  ...
+  components: {
+    VueFakeInput
+  }
+  ...
+};
+```
+
+
  #### In order to get the full value of the inputs, you have to add a `v-model` bind on
  #### vue-fake-input and link to any data attribute on your component.
 
