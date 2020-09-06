@@ -10,6 +10,7 @@
         borderBottom: fkInputColor(index),
         color: fontColor,
         width: fkWidth,
+        background: inputBG,
       }"
       v-model="inputValues[index]"
       @keydown="handleKeydown"
@@ -47,6 +48,11 @@ export default {
       default: '#444444',
       required: false,
     },
+    inputBackground: {
+      type: String,
+      default: '#FFFFF',
+      required: false,
+    },
     allowPaste: {
       type: Boolean,
       default: true,
@@ -66,6 +72,9 @@ export default {
   },
 
   computed: {
+    inputBG(){
+      return this.inputBackground
+    },
     fkFontSize() {
       return `${this.fontSize}px`;
     },
