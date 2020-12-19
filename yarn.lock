@@ -1124,13 +1124,13 @@
     yorkie "^2.0.0"
 
 "@vue/cli-plugin-unit-jest@^4.5.4":
-  version "4.5.6"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-4.5.6.tgz#21992c60d5bcba8b1947b21ba9dbdc0e9eddc0a8"
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-4.5.9.tgz#85e8e4d9de460db15e585769986b7f0fe369f18a"
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-modules-commonjs" "^7.9.6"
     "@types/jest" "^24.0.19"
-    "@vue/cli-shared-utils" "^4.5.6"
+    "@vue/cli-shared-utils" "^4.5.9"
     babel-core "^7.0.0-bridge.0"
     babel-jest "^24.9.0"
     babel-plugin-transform-es2015-modules-commonjs "^6.26.2"
@@ -1221,7 +1221,7 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.5.6", "@vue/cli-shared-utils@^4.5.9":
+"@vue/cli-shared-utils@^4.5.9":
   version "4.5.9"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.9.tgz#487cea4b4282f4dff907ee7d8abba8dd0dd03ccd"
   dependencies:
