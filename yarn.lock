@@ -3543,8 +3543,8 @@ eslint-plugin-import@^2.17.3:
     tsconfig-paths "^3.9.0"
 
 eslint-plugin-vue@^7.3.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.4.0.tgz#27324cbe8f00705708c9fa9e8c0401d8f0742c20"
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.4.1.tgz#2526ef0c010c218824a89423dbe6ddbe76f04fd6"
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
