@@ -1221,7 +1221,7 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.5.10", "@vue/cli-shared-utils@^4.5.11":
+"@vue/cli-shared-utils@^4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.11.tgz#fff71673ee9128f998c691515b9d327071b4f41e"
   dependencies:
@@ -3543,13 +3543,13 @@ eslint-plugin-import@^2.17.3:
     tsconfig-paths "^3.9.0"
 
 eslint-plugin-vue@^7.3.0:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.4.1.tgz#2526ef0c010c218824a89423dbe6ddbe76f04fd6"
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.5.0.tgz#cc6d983eb22781fa2440a7573cf39af439bb5725"
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
     semver "^7.3.2"
-    vue-eslint-parser "^7.3.0"
+    vue-eslint-parser "^7.4.1"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
@@ -8974,9 +8974,9 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
 
-vue-eslint-parser@^7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.3.0.tgz#894085839d99d81296fa081d19643733f23d7559"
+vue-eslint-parser@^7.4.1:
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.4.1.tgz#e4adcf7876a7379758d9056a72235af18a587f92"
   dependencies:
     debug "^4.1.1"
     eslint-scope "^5.0.0"
