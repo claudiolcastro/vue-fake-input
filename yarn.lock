@@ -1129,14 +1129,14 @@
     yorkie "^2.0.0"
 
 "@vue/cli-plugin-unit-jest@^4.5.4":
-  version "4.5.13"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-4.5.13.tgz#6aca031452a5883f39580ec50ea926c982e1d138"
-  integrity sha512-8t7QIihJWB9Kv85FamrEzWbJnvsLhQdyXHl3h+qhAihrZdLL+9mj905y88cBCq+i2PqqZ/qAoabbpf4DxDAb7g==
+  version "4.5.15"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-4.5.15.tgz#7be914ca1507ca344487eb377ed925c9db0b772a"
+  integrity sha512-oE3RDMerb21P6ALg70Zh2zU+RYYjoe09/7ZXYUj03uTb2obqUbcINpFfeVwM0B/J6H1YmqWJpnNBxWURhrqQHg==
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-modules-commonjs" "^7.9.6"
     "@types/jest" "^24.0.19"
-    "@vue/cli-shared-utils" "^4.5.13"
+    "@vue/cli-shared-utils" "^4.5.15"
     babel-core "^7.0.0-bridge.0"
     babel-jest "^24.9.0"
     babel-plugin-transform-es2015-modules-commonjs "^6.26.2"
@@ -1229,10 +1229,10 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.5.13":
-  version "4.5.13"
-  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.13.tgz#acd40f31b4790f1634292bdaa5fca95dc1e0ff50"
-  integrity sha512-HpnOrkLg42RFUsQGMJv26oTG3J3FmKtO2WSRhKIIL+1ok3w9OjGCtA3nMMXN27f9eX14TqO64M36DaiSZ1fSiw==
+"@vue/cli-shared-utils@^4.5.13", "@vue/cli-shared-utils@^4.5.15":
+  version "4.5.15"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.15.tgz#dba3858165dbe3465755f256a4890e69084532d6"
+  integrity sha512-SKaej9hHzzjKSOw1NlFmc6BSE0vcqUQMQiv1cxQ2DhVyy4QxZXBmzmiLBUBe+hYZZs1neXW7n//udeN9bCAY+Q==
   dependencies:
     "@hapi/joi" "^15.0.1"
     chalk "^2.4.2"
@@ -1277,10 +1277,10 @@
   resolved "https://registry.yarnpkg.com/@vue/preload-webpack-plugin/-/preload-webpack-plugin-1.1.2.tgz#ceb924b4ecb3b9c43871c7a429a02f8423e621ab"
   integrity sha512-LIZMuJk38pk9U9Ur4YzHjlIyMuxPlACdBIHH9/nGYVTsaGKOSnSuELiE8vS9wa+dJpIYspYUOqk+L1Q4pgHQHQ==
 
-"@vue/test-utils@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.2.0.tgz#3bc8c17ed549157275f0aec6b95da40887f7297f"
-  integrity sha512-poBTLqeJYNq1TXVhtVfnY8vELUVOFdJY8KZZoUuaAkIqPTWsxonU1M8nMWpZT+xEMrM+49+YcuEqtMHVD9Q9gw==
+"@vue/test-utils@1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.3.0.tgz#d563decdcd9c68a7bca151d4179a2bfd6d5c3e15"
+  integrity sha512-Xk2Xiyj2k5dFb8eYUKkcN9PzqZSppTlx7LaQWBbdA8tqh3jHr/KHX2/YLhNFc/xwDrgeLybqd+4ZCPJSGPIqeA==
   dependencies:
     dom-event-types "^1.0.0"
     lodash "^4.17.15"
