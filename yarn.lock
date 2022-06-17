@@ -1679,11 +1679,11 @@
     webpack "^5.54.0"
 
 "@vue/cli-plugin-eslint@^4.5.4":
-  version "4.5.13"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-4.5.13.tgz#8baf22d0d96d76720c7506646b96f4f62c05bdfa"
-  integrity sha512-yc2uXX6aBiy3vEf5TwaueaDqQbdIXIhk0x0KzEtpPo23jBdLkpOSoU5NCgE06g/ZiGAcettpmBSv73Hfp4wHEw==
+  version "4.5.18"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-4.5.18.tgz#5cb4a25eba6a51cff8d8fd46345d424a7a05bc57"
+  integrity sha512-UWacV26Ul+W61PwvMBv4Msh2h3Umr5FG0ApXFzLQTgyc/rCmXvhR53pW252zVZ2tf7s2n7xDFnp/mrCUrkb2tw==
   dependencies:
-    "@vue/cli-shared-utils" "^4.5.13"
+    "@vue/cli-shared-utils" "^4.5.18"
     eslint-loader "^2.2.1"
     globby "^9.2.0"
     inquirer "^7.1.0"
@@ -1791,10 +1791,10 @@
     semver "^6.0.0"
     string.prototype.padstart "^3.0.0"
 
-"@vue/cli-shared-utils@^4.5.13", "@vue/cli-shared-utils@^4.5.17":
-  version "4.5.17"
-  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.17.tgz#bb4aac8b816036cf5c0adf3af3cc1cb9c425501e"
-  integrity sha512-VoFNdxvTW4vZu3ne+j1Mf7mU99J2SAoRVn9XPrsouTUUJablglM8DASk7Ixhsh6ymyL/W9EADQFR6Pgj8Ujjuw==
+"@vue/cli-shared-utils@^4.5.17", "@vue/cli-shared-utils@^4.5.18":
+  version "4.5.18"
+  resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.18.tgz#372e835d2b30c325d2bb47f7d477a6942d882b19"
+  integrity sha512-rYX8watG/+SFmkedXMZ3hJP+26/bz80f9zG9dMUfBMqTAqIDGICDtuP4H4QXZL3PCKI/HWFCMhRWf2wO4eGEPg==
   dependencies:
     "@achrinza/node-ipc" "9.2.2"
     "@hapi/joi" "^15.0.1"
